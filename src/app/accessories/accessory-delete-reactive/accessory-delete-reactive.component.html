@@ -1,0 +1,8 @@
+<h3>Delete Accessory</h3>
+<form [formGroup]="accessoryDeleteForm" (ngSubmit)="delete()">
+<div class="form-group">
+    <input type="text" id="id" name="id" formControlName="id" clas="form-control" placeholder="Accessory ID">
+    <div class="alert alert-danger" *ngIf="accessoryDeleteForm.get('id').hasError('required') && accessoryDeleteForm.get('id').dirty">Accessory id is required!</div>
+</div>
+<button type="submit" class="btn btn-danger" [disabled]="accessoryDeleteForm.invalid">Delete Accessory</button>
+</form>

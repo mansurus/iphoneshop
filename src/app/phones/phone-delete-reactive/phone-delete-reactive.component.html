@@ -1,0 +1,8 @@
+<h3>Delete iPhone</h3>
+<form [formGroup]="phoneDeleteForm" (ngSubmit)="delete()">
+<div class="form-group">
+    <input type="text" id="id" name="id" formControlName="id" clas="form-control" placeholder="Phone ID">
+    <div class="alert alert-danger" *ngIf="phoneDeleteForm.get('id').hasError('required') && phoneDeleteForm.get('id').dirty">Phone id is required!</div>
+</div>
+<button type="submit" class="btn btn-danger" [disabled]="phoneDeleteForm.invalid">Delete iPhone</button>
+</form>

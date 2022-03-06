@@ -1,0 +1,33 @@
+<h3 *ngIf="phones; else noPhones">{{ title }}</h3>
+<div class="mb-3">
+  <input
+    class="form-control"
+    id="phoneName"
+    placeholder="Type for search"
+    [(ngModel)]="filterText"
+  />
+  <div *ngIf="filterText" class="form-text">
+    You are searching for <strong>{{filterText}}</strong>
+  </div>
+</div>
+<div class="row">
+  <ng-template #noPhones>
+    <div class="alert alert-warning" role="alert">
+      No phones found in this category!
+    </div>
+  </ng-template>
+
+  <div *ngFor="let phone of phones | phoneFilter:filterText" class="card" style="width: 18rem">
+    <img class="card-img-top" [src]="phone.imageUrl" [alt]="phone.phoneModel" />
+    <div class="card-body">
+      <h5 class="card-title">{{ phone.phoneModel }} ID: {{phone.id}}</h5>
+      <p class="card-text">
+        {{ phone.description }}
+      </p>
+      <p class="card-text">
+        {{ phone.price | currency: "₺":false }}
+      </p>
+      <a (click)="addToCart(phone)" class="btn btn-primary btn-sm">Buy</a>
+    </div>
+  </div>
+</div>

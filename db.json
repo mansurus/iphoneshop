@@ -1,0 +1,69 @@
+{
+  "phones": [
+    {
+      "id": 1,
+      "name": "iPhone",
+      "price": "11111",
+      "imageUrl": "https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/iphone-13-starlight-select-2021?wid=470&hei=556&fmt=png-alpha&.v=1629907845000",
+      "color": "Starlight",
+      "screenSize": "6.1 inches",
+      "description": "The less latest wonder of iPhone.",
+      "sku": "IP123450",
+      "phoneModel": "iPhone 13 updated"
+    },
+    {
+      "id": 2,
+      "name": "iPhone",
+      "price": "22000",
+      "imageUrl": "https://store.storeimages.cdn-apple.com/4668/as-images.apple.com/is/iphone-13-pro-family-hero?wid=470&hei=556&fmt=png-alpha&.v=1631220221000",
+      "color": "silver",
+      "screenSize": "6.7 inches",
+      "description": "The latest wonder of the iPhone.",
+      "sku": "IP123451",
+      "phoneModel": "iPhone 13 Pro"
+    },
+    {
+      "id": 3,
+      "name": "iPhone",
+      "price": "14000",
+      "imageUrl": "https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/iphone-12-purple-select-2021?wid=470&hei=556&fmt=png-alpha&.v=1617130317000",
+      "color": "purple",
+      "screenSize": "6.1 inches",
+      "description": "A superpowerful chip. 5G speed. An advanced dual‑camera system. A Ceramic Shield front that's tougher than any smartphone glass.",
+      "sku": "IP123452",
+      "phoneModel": "iPhone 12"
+    }
+  ],
+  "accessories": [
+    {
+      "id": 1,
+      "name": "iPhone 13 Pro Silicon Case",
+      "price": 1000,
+      "imageUrl": "https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/MM2D3?wid=572&hei=572&fmt=jpeg&qlt=95&.v=1629923573000"
+    },
+    {
+      "id": 2,
+      "name": "MagSafe Battery Pack",
+      "price": 2000,
+      "imageUrl": "https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/MJWY3?wid=572&hei=572&fmt=jpeg&qlt=95&.v=1625613219000"
+    },
+    {
+      "id": 3,
+      "name": "AirTag",
+      "price": 700,
+      "imageUrl": "https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/airtag-single-select-202104_FV1?wid=445&hei=370&fmt=jpeg&qlt=95&.v=1617761670000"
+    },
+    {
+      "id": 4,
+      "name": "20W USB-C Charger",
+      "price": "850",
+      "imageUrl": "https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/MU7T2_GEO_US?wid=572&hei=572&fmt=jpeg&qlt=95&.v=1542406417329"
+    },
+    {
+      "id": "6",
+      "name": "Smart Folio",
+      "price": "800",
+      "imageUrl": "https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/MM6J3?wid=572&hei=572&fmt=jpeg&qlt=95&.v=1630095972000"
+    }
+  ]
+}

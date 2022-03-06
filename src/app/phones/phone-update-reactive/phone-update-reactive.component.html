@@ -1,0 +1,47 @@
+<h3>Update iPhone</h3>
+<form [formGroup]="phoneUpdateForm" (ngSubmit)="update()">
+<div class="form-group">
+    <input type="text" id="id" name="id" formControlName="id" clas="form-control" placeholder="Phone ID">
+    <div class="alert alert-danger" *ngIf="phoneUpdateForm.get('id').hasError('required') && phoneUpdateForm.get('id').dirty">Phone id is required!</div>
+</div>
+<div class="form-group">
+    <input type="text" id="name" name="name" formControlName="name" clas="form-control" placeholder="Phone Name">
+    <div class="alert alert-danger" *ngIf="phoneUpdateForm.get('name').hasError('required') && phoneUpdateForm.get('name').dirty">Phone name is required!</div>
+</div>
+
+<div class="form-group">
+    <input type="text" id="price" name="price" formControlName="price" clas="form-control" placeholder="Phone price">
+    <div class="alert alert-danger" *ngIf="phoneUpdateForm.get('price').hasError('required') && phoneUpdateForm.get('price').dirty">Phone price is required!</div>
+</div>
+
+<div class="form-group">
+    <input type="text" id="imageUrl" name="imageUrl" formControlName="imageUrl" clas="form-control" placeholder="Phone Image Link">
+    <div class="alert alert-danger" *ngIf="phoneUpdateForm.get('imageUrl').hasError('required') && phoneUpdateForm.get('imageUrl').dirty">Phone image link is required!</div>
+</div>
+
+<div class="form-group">
+    <input type="text" id="color" name="color" formControlName="color" clas="form-control" placeholder="Phone color">
+    <div class="alert alert-danger" *ngIf="phoneUpdateForm.get('color').hasError('required') && phoneUpdateForm.get('color').dirty">Phone color is required!</div>
+</div>
+
+<div class="form-group">
+    <input type="text" id="screenSize" name="screenSize" formControlName="screenSize" clas="form-control" placeholder="Phone Screen Size">
+    <div class="alert alert-danger" *ngIf="phoneUpdateForm.get('screenSize').hasError('required') && phoneUpdateForm.get('screenSize').dirty">Phone screen size is required!</div>
+</div>
+
+<div class="form-group">
+    <input type="text" id="description" name="description" formControlName="description" clas="form-control" placeholder="Phone description">
+    <div class="alert alert-danger" *ngIf="phoneUpdateForm.get('description').hasError('required') && phoneUpdateForm.get('description').dirty">Phone description is required!</div>
+</div>
+
+<div class="form-group">
+    <input type="text" id="sku" name="sku" formControlName="sku" clas="form-control" placeholder="Phone sku">
+    <div class="alert alert-danger" *ngIf="phoneUpdateForm.get('sku').hasError('required') && phoneUpdateForm.get('sku').dirty">Phone sku is required!</div>
+</div>
+
+<div class="form-group">
+    <input type="text" id="phoneModel" name="phoneModel" formControlName="phoneModel" clas="form-control" placeholder="Phone Model">
+    <div class="alert alert-danger" *ngIf="phoneUpdateForm.get('phoneModel').hasError('required') && phoneUpdateForm.get('phoneModel').dirty">Phone model is required!</div>
+</div>
+<button type="submit" class="btn btn-warning" [disabled]="phoneUpdateForm.invalid">Update iPhone</button>
+</form>

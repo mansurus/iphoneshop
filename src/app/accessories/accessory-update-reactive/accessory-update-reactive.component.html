@@ -1,0 +1,23 @@
+<h3>Update Accessory</h3>
+<form [formGroup]="accessoryUpdateForm" (ngSubmit)="update()">
+<div class="form-group">
+    <input type="text" id="id" name="id" formControlName="id" clas="form-control" placeholder="Accessory ID">
+    <div class="alert alert-danger" *ngIf="accessoryUpdateForm.get('id').hasError('required') && accessoryUpdateForm.get('id').dirty">Accessory id is required!</div>
+</div>
+<div class="form-group">
+    <input type="text" id="name" name="name" formControlName="name" clas="form-control" placeholder="Accessory Name">
+    <div class="alert alert-danger" *ngIf="accessoryUpdateForm.get('name').hasError('required') && accessoryUpdateForm.get('name').dirty">Accessory name is required!</div>
+</div>
+
+<div class="form-group">
+    <input type="text" id="price" name="price" formControlName="price" clas="form-control" placeholder="Accessory price">
+    <div class="alert alert-danger" *ngIf="accessoryUpdateForm.get('price').hasError('required') && accessoryUpdateForm.get('price').dirty">Accessory price is required!</div>
+</div>
+
+<div class="form-group">
+    <input type="text" id="imageUrl" name="imageUrl" formControlName="imageUrl" clas="form-control" placeholder="Accessory Image Link">
+    <div class="alert alert-danger" *ngIf="accessoryUpdateForm.get('imageUrl').hasError('required') && accessoryUpdateForm.get('imageUrl').dirty">Accessory image link is required!</div>
+</div>
+
+<button type="submit" class="btn btn-warning" [disabled]="accessoryUpdateForm.invalid">Update Accessory</button>
+</form>

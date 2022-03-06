@@ -1,0 +1,33 @@
+<h3 *ngIf="accessories; else noAccessory">{{ title }}</h3>
+<div class="mb-3">
+  <label>Sort by &nbsp;</label>
+  <select [(ngModel)]="sortByParam">
+    <option value="" disabled selected>Sort By Desc</option>
+    <option value="price">Price Desc</option>
+  </select>
+  <select [(ngModel)]="sortByParamAsc">
+    <option value="" disabled selected>Sort By Asc</option>
+    <option value="price">Price Asc</option>
+  </select>
+  <button type="button" (click)="deletePriceSort()">Clear Choice</button>
+</div>
+<div class="row">
+  <ng-template #noAccessory>
+    <div class="alert alert-warning" role="alert">
+      No accessories found in this category!
+    </div>
+  </ng-template>
+  
+
+  <div *ngFor="let accessory of accessories | accessorySort:[sortByParam,'desc'] | accessorySortAsc:[sortByParamAsc,'asc']" class="card"  style="width: 18rem;">
+    <img class="card-img-top" [src]="accessory.imageUrl" [alt]="accessory.name" />
+    <div class="card-body">
+      <h5 class="card-title">{{ accessory.name }} ID: {{accessory.id}}</h5>
+      <p class="card-text">
+        {{ accessory.price | currency: "₺":false }}
+      </p>
+      <a (click)="addToCart(accessory)" class="btn btn-primary btn-sm">Buy</a>
+  </div>
+    </div>
+          
+</div>

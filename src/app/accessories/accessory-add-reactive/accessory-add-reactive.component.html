@@ -1,0 +1,25 @@
+<h3>Add new Accessory</h3>
+<form [formGroup]="accessoryAddForm" (ngSubmit)="add()">
+<div class="form-group">
+    <input type="text" id="id" name="id" formControlName="id" clas="form-control" placeholder="Accesory ID">
+    <div class="alert alert-danger" *ngIf="accessoryAddForm.get('id').hasError('required') && accessoryAddForm.get('id').dirty">Accesory id is required!</div>
+</div>
+<div class="form-group">
+    <input type="text" id="name" name="name" formControlName="name" clas="form-control" placeholder="Accesory Name">
+    <div class="alert alert-danger" *ngIf="accessoryAddForm.get('name').hasError('required') && accessoryAddForm.get('name').dirty">Accesory name is required!</div>
+</div>
+
+<div class="form-group">
+    <input type="text" id="price" name="price" formControlName="price" clas="form-control" placeholder="Accesory price">
+    <div class="alert alert-danger" *ngIf="accessoryAddForm.get('price').hasError('required') && accessoryAddForm.get('price').dirty">Accesory price is required!</div>
+</div>
+
+<div class="form-group">
+    <input type="text" id="imageUrl" name="imageUrl" formControlName="imageUrl" clas="form-control" placeholder="Accesory Image Link">
+    <div class="alert alert-danger" *ngIf="accessoryAddForm.get('imageUrl').hasError('required') && accessoryAddForm.get('imageUrl').dirty">Accesory image link is required!</div>
+</div>
+
+
+<button type="submit" class="btn btn-primary" [disabled]="accessoryAddForm.invalid">Add Accesory</button>
+
+</form>
