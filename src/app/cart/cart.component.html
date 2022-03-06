@@ -1,0 +1,50 @@
+<div *ngIf="cartItemList.length>0" class="background"> 
+    <table class="table">
+      <thead>
+          <tr>
+            <th>Phone Id</th>
+            <th>Phone Name</th>
+            <th>Phone Price</th>
+            <th>Quantity</th>
+            
+          </tr>
+        </thead>
+        <tr *ngFor="let cart of cartItemList">
+          <td>{{cart.phone.id}}</td>
+          <td>{{cart.phone.name}}</td>
+          <td>{{cart.phone.price}}</td>
+          <td>{{cart.quantity}}</td>
+          
+        </tr>
+    </table>
+  </div>
+  <div *ngIf="cartItemListAccessory.length>0;" class="background"> 
+    <table class="table">
+        <thead>
+            <tr>
+              <th>Accessory Id</th>
+              <th>Accessory Name</th>
+              <th>Accessory Price</th>
+              <th>Quantity</th>
+              
+            </tr>
+          </thead>
+          <tr *ngFor="let cart of cartItemListAccessory">
+            <td>{{cart.accessory.id}}</td>
+            <td>{{cart.accessory.name}}</td>
+            <td>{{cart.accessory.price}}</td>
+            <td>{{cart.quantity}}</td>
+            
+          </tr>
+      </table>
+  </div>
+  <div class="alert alert-info">Total price: ${{getTotal()}}</div>
+  <div class="background">
+    <ng-template>
+      <a [routerLink]="''">Go to main page</a>
+    </ng-template>
+
+    
+      
+
+  </div>

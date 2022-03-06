@@ -8,6 +8,7 @@ import { PhoneUpdateReactiveComponent } from './phones/phone-update-reactive/pho
 import { PhoneDeleteReactiveComponent } from './phones/phone-delete-reactive/phone-delete-reactive.component';
 import { AccessoryUpdateReactiveComponent } from './accessories/accessory-update-reactive/accessory-update-reactive.component';
 import { AccessoryDeleteReactiveComponent } from './accessories/accessory-delete-reactive/accessory-delete-reactive.component';
+import { CartComponent } from './cart/cart.component';
 
 const routes: Routes = [
   {path:'',redirectTo:'phones',pathMatch:'full'},
@@ -18,7 +19,8 @@ const routes: Routes = [
   {path:'phone-delete',component:PhoneDeleteReactiveComponent},
   {path:'accessory-add',component:AccessoryAddReactiveComponent},
   {path:'accessory-update',component:AccessoryUpdateReactiveComponent},
-  {path:'accessory-delete',component:AccessoryDeleteReactiveComponent}
+  {path:'accessory-delete',component:AccessoryDeleteReactiveComponent},
+  {path:'cart',component:CartComponent},
 ];
 
 @NgModule({

@@ -20,6 +20,7 @@ import { AccessoryUpdateReactiveComponent } from './accessories/accessory-update
 import { AccessoryDeleteReactiveComponent } from './accessories/accessory-delete-reactive/accessory-delete-reactive.component';
 import { AccessorySortPipe } from './accessories/accessory-sort.pipe';
 import { AccessorySortAscPipe } from './accessories/accessory-sort-asc.pipe';
+import { CartComponent } from './cart/cart.component';
 
 @NgModule({
   declarations: [
@@ -37,6 +38,7 @@ import { AccessorySortAscPipe } from './accessories/accessory-sort-asc.pipe';
     AccessoryDeleteReactiveComponent,
     AccessorySortPipe,
     AccessorySortAscPipe,
+    CartComponent,
   ],
   imports: [
     BrowserModule,

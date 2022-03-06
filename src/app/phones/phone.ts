@@ -1,7 +1,7 @@
 export class Phone {
      id:number;
      name:string;
-     price:string;
+     price:number;
      imageUrl:string;
      color:string;
      screenSize:string;
